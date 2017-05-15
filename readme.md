@@ -1,5 +1,5 @@
 
-###This app is a basic user account management system built in Node.js with the following features:
+###This app is a basic user account login and registration system built in Node.js with the following features:
 
 * New User Account Creation
 * Secure Password Reset via Email
@@ -21,7 +21,7 @@
 * [Twitter Bootstrap](http://twitter.github.com/bootstrap/) - UI Component & Layout Library
 
 
-##Installation Instructions
+###Installation Instructions
 1. Install [Node.js](https://nodejs.org/) & [MongoDB](https://www.mongodb.org/) if you haven't already.
 2. Clone this repository and install its dependencies.
 		
@@ -40,9 +40,9 @@
 5. Open a browser window and navigate to: [http://localhost:3000](http://localhost:3000)
 
 
-##Password Retrieval
+###Password Retrieval
 
-To enable the password retrieval feature it is recommended that you create environment variables for your credentials instead of hard coding them into the [email dispatcher module](email-dispatcher.js).
+To enable the password retrieval feature it is recommended that you create environment variables for your credentials instead of hard coding them into the email dispatcher module i.e. email-dispatcher.js
 
 
 
