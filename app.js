@@ -37,7 +37,7 @@ if (app.get('env') == 'live'){
 	dbURL = 'mongodb://'+process.env.DB_USER+':'+process.env.DB_PASS+'@'+dbHost+':'+dbPort+'/'+dbName;
 }*/
 console.log('dbHost is '+dbHost);
-var dbURL = process.env.MONGODB_URI
+var dbURL = process.env.MONGODB_URI || 'mongodb://'+dbHost+':'+dbPort+'/'+dbName;
 
 app.use(session({
 	secret: 'faeb4453e5d14fe6f6d04637f78077c76c73d1b4',
