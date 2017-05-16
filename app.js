@@ -36,7 +36,7 @@ if (app.get('env') == 'live'){
 // prepend url with authentication credentials // 
 	dbURL = 'mongodb://'+process.env.DB_USER+':'+process.env.DB_PASS+'@'+dbHost+':'+dbPort+'/'+dbName;
 }*/
-
+console.log('dbHost is '+dbHost);
 var dbURL = process.env.MONGODB_URI
 
 app.use(session({

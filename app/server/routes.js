@@ -92,6 +92,7 @@ module.exports = function(app) {
 	});
 	
 	app.post('/signup', function(req, res){
+		console.log(req)
 		AM.addNewAccount({
 			name 	: req.body['name'],
 			email 	: req.body['email'],
@@ -104,6 +105,7 @@ module.exports = function(app) {
 			}	else{
 				res.status(200).send('ok');
 			}
+			console.log(res)
 		});
 	});
 
