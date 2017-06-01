@@ -99,7 +99,7 @@ module.exports = function(app) {
 			email 	: req.body['email'],
 			user 	: req.body['user'],
 			pass	: req.body['pass'],
-			country : req.body['country']`
+			country : req.body['country']
 		}, function(e){
 			if (e){
 				res.status(400).send(e);
