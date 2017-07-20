@@ -46,8 +46,8 @@ var dbURL = process.env.MONGODB_URI || 'mongodb://'+dbHost+':'+dbPort+'/'+dbName
 var conf = {
   db: {
     db: dbName,
-    host: dbName,
-    port: dbName,
+    host: dbHost,
+    port: dbPort,
     url:dbURL  // optional, default: 27017
     
   }
