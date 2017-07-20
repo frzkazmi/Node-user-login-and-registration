@@ -31,6 +31,9 @@ var dbHost = process.env.DB_HOST || 'localhost'
 var dbPort = process.env.DB_PORT || 27017;
 var dbName = process.env.DB_NAME || 'node-login';
 
+
+  
+
 /*var dbURL = 'mongodb://'+dbHost+':'+dbPort+'/'+dbName;
 if (app.get('env') == 'live'){
 // prepend url with authentication credentials // 
@@ -40,12 +43,21 @@ if (app.get('env') == 'live'){
 console.log('dbHost is '+dbHost);
 var dbURL = process.env.MONGODB_URI || 'mongodb://'+dbHost+':'+dbPort+'/'+dbName;
 
+var conf = {
+  db: {
+    db: dbName,
+    host: dbName,
+    port: dbName,
+    url:dbURL  // optional, default: 27017
+    
+  }
+};
 app.use(session({
 	secret: 'faeb4453e5d14fe6f6d04637f78077c76c73d1b4',
 	proxy: true,
 	resave: true,
 	saveUninitialized: true,
-	store: new MongoStore({ url: dbURL })
+	store: new MongoStore(conf.db)
 	})
 );
 
