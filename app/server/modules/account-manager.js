@@ -17,7 +17,7 @@ db.open(function(e, d){
 	if (e) {
 		console.log(e);
 	} else {
-		if (process.env.NODE_ENV == 'live') {
+		if (process.env.NODE_ENV == 'production') {
 			db.authenticate(process.env.DB_USER, process.env.DB_PASS, function(e, res) {
 				if (e) {
 					console.log('mongo :: error: not authenticated', e);
