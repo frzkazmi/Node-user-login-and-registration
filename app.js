@@ -1,4 +1,4 @@
--
+
 /**
 	* Node.js Login Boilerplate
 	* More Info : http://kitchen.braitsch.io/building-a-login-system-in-node-js-and-mongodb/
@@ -45,7 +45,7 @@ app.use(session({
 	proxy: true,
 	resave: true,
 	saveUninitialized: true,
-	store: new MongoStore({ url: dbURL,host: dbHost,port: dbPort })
+	store: new MongoStore({ url: dbURL })
 	})
 );
 
