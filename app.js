@@ -1,4 +1,4 @@
-
+-
 /**
 	* Node.js Login Boilerplate
 	* More Info : http://kitchen.braitsch.io/building-a-login-system-in-node-js-and-mongodb/
@@ -36,6 +36,7 @@ if (app.get('env') == 'live'){
 // prepend url with authentication credentials // 
 	dbURL = 'mongodb://'+process.env.DB_USER+':'+process.env.DB_PASS+'@'+dbHost+':'+dbPort+'/'+dbName;
 }*/
+//mongodb://heroku_cmwlnh10:l9s8vv528huapvcom655m9su2f@ds143081.mlab.com:43081/heroku_cmwlnh10
 console.log('dbHost is '+dbHost);
 var dbURL = process.env.MONGODB_URI || 'mongodb://'+dbHost+':'+dbPort+'/'+dbName;
 
@@ -44,7 +45,7 @@ app.use(session({
 	proxy: true,
 	resave: true,
 	saveUninitialized: true,
-	store: new MongoStore({ url: dbURL })
+	store: new MongoStore({ url: dbURL,host: dbHost,port: dbPort })
 	})
 );
 
